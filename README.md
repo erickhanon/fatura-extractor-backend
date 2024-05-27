@@ -52,7 +52,7 @@ O backend é construído usando Node.js com Express e TypeScript.
    ```
 3. Configure as variáveis de ambiente no arquivo `.env`:
    ```env
-   DATABASE_URL=postgresql://admin:qwerty!@#123@localhost:5432/PDF_DB
+   DATABASE_URL="postgresql://admin:qwerty%21%40%23123@localhost:5432/PDF_DB"
    ```
 4. Execute o servidor:
    ```bash
