@@ -1,0 +1,23 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Fatura {
+  id                    Int      @id @default(autoincrement())
+  client_number         String
+  reference_month       String
+  energia_eletrica_kwh  Int
+  energia_eletrica_valor Decimal
+  energia_scee_kwh      Int
+  energia_scee_valor    Decimal
+  energia_compensada_kwh Int
+  energia_compensada_valor Decimal
+  contrib_ilum_valor    Decimal
+  installation_number   String
+}
+
